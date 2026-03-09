@@ -6,7 +6,7 @@
 </div>
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="Figures/affectflow_mascot_2.png">
+  <source media="(prefers-color-scheme: dark)" srcset="Figures/affectflow_mascot_7.png">
   <img src="Figures/affectflow_mascot_2.png" alt="AffectFlow Logo" width="800">
 </picture>
 
