@@ -1,0 +1,29 @@
+base_config: ./base.yaml
+task_cls: tasks.tts.transformertts.TransformerTTSTask
+dataset_cls: tasks.tts.dataset_utils.TransformerTTSDataset
+model_cls: models.tts.transformertts.TransformerTTS
+
+################################
+# Model Parameters             #
+################################
+n_mel_channels: 80
+data_type: "phone_seq" # 'phone_seq'
+symbols_embedding_dim: 256
+hidden_dim: 256
+dprenet_dim: 256
+postnet_dim: 256
+ff_dim: 1024
+n_heads: 4
+n_layers: 6
+n_postnet_layers: 5
+
+n_frames_per_step: 1
+gate_threshold: 0.5
+max_decoder_steps: 1000
+
+# train and eval
+warmup_updates: 4000
+max_updates: 200000
+max_sentences: 32
+
+lambda_stop: 5.0

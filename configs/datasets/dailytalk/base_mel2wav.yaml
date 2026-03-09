@@ -1,0 +1,4 @@
+base_config: /AffectFlow/configs/models/vocoder/base.yaml
+raw_data_dir: /dataset/dailytalk_22.5khz
+processed_data_dir: /dataset/processed/dailytalk_22.5khz
+binary_data_dir: /dataset/binary/dailytalk_22.5khz

@@ -1,0 +1,6 @@
+base_config:
+  - configs/models/tts/fastspeech2.yaml
+  - configs/datasets/dailytalk/base_text2mel.yaml
+vocoder_cls: models.vocoder.hifigan.HiFiGAN
+vocoder_config: configs/models/vocoder/hifigan.yaml
+vocoder_ckpt: "/checkpoints/vocoder/hifi_univ/g_02500000"

@@ -1,0 +1,17 @@
+base_config:
+  - configs/models/vocoder/vocos.yaml
+  - configs/datasets/lj/base_mel2wav.yaml
+
+binarization_args:
+  train_range: [871, -1]
+  test_range: [0, 10]
+  valid_range: [523, 871]
+test_ids: []
+max_frames: 1548
+frames_multiple: 1
+max_input_tokens: 1550
+use_spk_embed: false
+use_spk_id: false
+vocoder_cls: models.vocoder.vocos.VocosBackbone
+vocoder_config: configs/models/vocoder/vocos.yaml
+vocoder_ckpt: /checkpoints/0403_Vocos/model_ckpt_steps_2000000.ckpt

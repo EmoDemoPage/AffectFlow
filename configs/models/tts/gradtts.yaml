@@ -1,0 +1,36 @@
+base_config: ./base.yaml
+task_cls: tasks.tts.gradtts.GradTTSTask
+dataset_cls: tasks.tts.dataset_utils.GradTTSDataset
+model_cls: models.tts.gradtts.GradTTS
+
+# model
+n_feats: 80
+n_spks: 1
+spk_emb_dim: 64
+
+# encoder parameters
+n_enc_channels: 192
+filter_channels: 768
+filter_channels_dp: 256
+n_enc_layers: 6
+enc_kernel: 3
+enc_dropout: 0.1
+n_heads: 2
+window_size: 4
+
+# decoder parameters
+dec_dim: 64
+beta_min: 0.05
+beta_max: 20.0
+pe_scale: 1000 # 1 for `grad-tts-old.pt` checkpoint
+
+out_size: 172 #  fix_len_compatibility(2*22050//256)
+
+lr: 0.0001
+scheduler: warmup # rsqrt|warmup|none|noam
+
+# train and eval
+max_sentences: 16
+warmup_updates: 4000
+
+max_updates: 1100000

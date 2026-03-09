@@ -1,0 +1,9 @@
+base_config:
+  - configs/models/tts/fastspeech.yaml
+  - configs/datasets/lj/base_text2mel.yaml
+# vocoder_cls: models.vocoder.hifigan.HiFiGAN
+# vocoder_config: configs/models/vocoder/hifigan.yaml
+# vocoder_ckpt: checkpoints/hifigan_universal_v1/g_02500000
+vocoder_cls: models.vocoder.bigvgan.BigVGAN
+vocoder_config: configs/models/vocoder/bigvgan.yaml
+vocoder_ckpt: checkpoints/bigvgan_base_22khz_80band/g_05000000.zip
